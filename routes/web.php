@@ -14,3 +14,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+Route::post('/u/l','User\UserController@login');
+Route::get('/u/center','User\UserController@uCenter');
+Route::get('/u/order','User\UserController@order');

@@ -21,9 +21,9 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-// $app->withFacades();
+ $app->withFacades();
 
-// $app->withEloquent();
+ $app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ $app->singleton(
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
-
+$app->register(Illuminate\Redis\RedisServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
